@@ -52,7 +52,7 @@ public class VirtualPetShelterTest {
 	@Test
 	public void shouldDecreaseHungerOfOnePetToZero() {
 		underTest.takeInNewPetToShelter(virtualPet1);
-		underTest.feedPet("pet1");
+		underTest.feedPetInShelter("pet1");
 		VirtualPet testedPet = underTest.findPetInShelter("pet1");
 		int result = testedPet.getHunger();
 		assertEquals(result, 0);

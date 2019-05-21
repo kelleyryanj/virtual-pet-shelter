@@ -25,42 +25,45 @@ public class VirtualPet {
 	}
 
 	public int getBoredom() {
-		
+
 		return boredom;
 
 	}
 
-//	public int thirst() {
-//		
-//		return thirst;
-//	}
-
-	public void feedPet() {
-		hunger -= 50;
-		
-	}
-	
-	public void play() {
-		boredom -=10;
-	}
-
 	public int getThirst() {
-		
+
 		return thirst;
 	}
 
+	public void feedPet() {
+		hunger -= 50;
+		if (hunger < 0) {
+			hunger = 0;
+		}
+
+	}
+
+	public void play() {
+		boredom -= 10;
+		if (boredom < 0) {
+			boredom = 0;
+
+		}
+	}
+
+
 	public void water() {
-		thirst -=15;
+		thirst -= 15;
+		if (thirst < 0) {
+			thirst = 0;
+		}
 	}
 
 	public void tick() {
 		hunger += 1;
-		boredom +=1;
-		thirst +=1;
-		
+		boredom += 1;
+		thirst += 1;
+
 	}
 
-
-		
-	
 }
