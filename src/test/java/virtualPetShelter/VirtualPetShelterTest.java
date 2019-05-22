@@ -20,8 +20,8 @@ public class VirtualPetShelterTest {
 	@Before
 	public void setup() {
 		underTest = new VirtualPetShelter();
-		virtualPet1 = new VirtualPet("pet1", 50, 10, 15);
-		virtualPet2 = new VirtualPet("pet2", 50, 10, 15);
+		virtualPet1 = new VirtualPet("pet1", "description", 50, 10, 15);
+		virtualPet2 = new VirtualPet("pet2", "description", 50, 10, 15);
 
 	}
 
